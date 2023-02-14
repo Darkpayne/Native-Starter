@@ -13,11 +13,7 @@ const FeaturedRow = ({ id, title, description }) => {
         `
     *[_type == "featured" && _id == $id]{
       ...,restaurants[]->{
-        ..., dishes[]->{
-          type->{
-          name
-          }
-        }
+        ..., dishes[]->
       }
     }[0]
     `,
